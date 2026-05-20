@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { openai } from '@/lib/openai'
-import { GeneratedProject } from '@/lib/types'
+import { openai } from '../../../lib/openai'
+import { GeneratedProject } from '../../../lib/types'
 
 export async function POST(req: NextRequest) {
   try {
