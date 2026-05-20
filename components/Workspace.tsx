@@ -1,7 +1,8 @@
+// components/Workspace.tsx
 'use client'
 
 import { useState } from 'react'
-import { GeneratedProject } from '@/lib/types'
+import type { GeneratedProject } from '@/lib/types'
 import { IdeaInput } from './IdeaInput'
 import { FolderTree } from './FolderTree'
 import { SlideCard } from './SlideCard'
@@ -46,13 +47,11 @@ export function Workspace({ project, isLoading, onGenerate }: WorkspaceProps) {
   return (
     <main className="flex-1 overflow-y-auto p-8 bg-neutral-100">
       <div className="max-w-5xl mx-auto space-y-8">
-        {/* Header */}
         <header>
           <h2 className="text-2xl font-semibold text-neutral-900">{project!.title}</h2>
           <p className="text-neutral-600 mt-2 leading-relaxed">{project!.overview}</p>
         </header>
 
-        {/* Slides */}
         <section>
           <h3 className="text-sm font-medium text-neutral-500 mb-4">Overview</h3>
           <div className="flex gap-4 overflow-x-auto pb-4">
@@ -63,14 +62,12 @@ export function Workspace({ project, isLoading, onGenerate }: WorkspaceProps) {
         </section>
 
         <div className="grid grid-cols-3 gap-6">
-          {/* Folders */}
           <FolderTree
             folders={project!.folders}
             onSelectFolder={setActiveFolder}
             activeFolder={activeFolder}
           />
 
-          {/* Opportunities */}
           <div className="bg-white border border-neutral-200 rounded-lg p-4">
             <h3 className="text-sm font-medium text-neutral-500 mb-3">Opportunities</h3>
             <ul className="space-y-2">
@@ -83,7 +80,6 @@ export function Workspace({ project, isLoading, onGenerate }: WorkspaceProps) {
             </ul>
           </div>
 
-          {/* Resources */}
           <div className="bg-white border border-neutral-200 rounded-lg p-4">
             <h3 className="text-sm font-medium text-neutral-500 mb-3">Learning Resources</h3>
             <ul className="space-y-3">
@@ -97,7 +93,6 @@ export function Workspace({ project, isLoading, onGenerate }: WorkspaceProps) {
           </div>
         </div>
 
-        {/* Next Steps */}
         <section className="bg-white border border-neutral-200 rounded-lg p-6">
           <h3 className="text-sm font-medium text-neutral-500 mb-4">Next Steps</h3>
           <ul className="grid grid-cols-3 gap-4">
@@ -113,7 +108,6 @@ export function Workspace({ project, isLoading, onGenerate }: WorkspaceProps) {
           </ul>
         </section>
 
-        {/* Proactive Actions */}
         <section className="border-t border-neutral-200 pt-6">
           <h3 className="text-sm font-medium text-neutral-500 mb-4">Go Deeper</h3>
           <div className="flex flex-wrap gap-2">

@@ -1,8 +1,6 @@
+// components/SlideCard.tsx
 interface SlideCardProps {
-  slide: {
-    title: string
-    content: string
-  }
+  slide: { title: string; content: string }
   index: number
 }
 

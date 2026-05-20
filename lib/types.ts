@@ -1,3 +1,4 @@
+// lib/types.ts
 export interface GeneratedProject {
   title: string
   overview: string
@@ -9,10 +10,7 @@ export interface GeneratedProject {
     description: string
   }[]
   next_steps: string[]
-  slides: {
-    title: string
-    content: string
-  }[]
+  slides: { title: string; content: string }[]
 }
 
 export interface Project {

@@ -1,3 +1,4 @@
+// components/IdeaInput.tsx
 'use client'
 
 import { useState } from 'react'
@@ -12,9 +13,7 @@ export function IdeaInput({ onGenerate, isLoading }: IdeaInputProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    if (idea.trim()) {
-      onGenerate(idea.trim())
-    }
+    if (idea.trim()) onGenerate(idea.trim())
   }
 
   return (

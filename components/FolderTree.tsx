@@ -1,3 +1,4 @@
+// components/FolderTree.tsx
 interface FolderTreeProps {
   folders: string[]
   onSelectFolder: (folder: string) => void

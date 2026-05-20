@@ -1,6 +1,7 @@
+// components/Sidebar.tsx
 'use client'
 
-import { Project } from '@/lib/types'
+import type { Project } from '@/lib/types'
 
 interface SidebarProps {
   projects: Project[]
@@ -19,8 +20,7 @@ export function Sidebar({ projects, activeProjectId, onSelectProject, onNewProje
       <div className="p-3">
         <button
           onClick={onNewProject}
-          className="w-full px-3 py-2 text-sm text-left text-neutral-600 hover:bg-neutral-100
-                     rounded-md transition-colors flex items-center gap-2"
+          className="w-full px-3 py-2 text-sm text-left text-neutral-600 hover:bg-neutral-100 rounded-md transition-colors flex items-center gap-2"
         >
           <span className="text-lg">+</span> New Project
         </button>
